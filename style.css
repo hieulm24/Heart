@@ -1,0 +1,83 @@
+/* =========================================================
+   LUXURY GLOWING PARTICLE HEART - MỸ HẰNG
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  background-color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  position: relative;
+  touch-action: none;
+}
+
+/* Particle Canvas */
+#heartCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: block;
+  cursor: grab;
+}
+
+#heartCanvas:active {
+  cursor: grabbing;
+}
+
+/* Centerpiece Container */
+.center-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: none;
+  text-align: center;
+  width: 100%;
+  max-width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Proportional Typography for "Mỹ Hằng" (Ruby Red & Diamond Aura) */
+.heart-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  color: #fff5f7;
+  white-space: nowrap;
+  pointer-events: none;
+  transform-origin: center center;
+  transition: transform 0.1s ease-out;
+  text-shadow: 
+    0 0 8px rgba(255, 255, 255, 0.95),
+    0 0 16px rgba(255, 30, 70, 0.8),
+    0 0 28px rgba(200, 0, 40, 0.5);
+  filter: drop-shadow(0 0 8px rgba(255, 20, 60, 0.5));
+}
+
+/* Mobile Responsive Optimization */
+@media (max-width: 600px) {
+  .heart-name {
+    font-size: clamp(1.8rem, 7.5vw, 2.8rem);
+    letter-spacing: 1px;
+  }
+}
